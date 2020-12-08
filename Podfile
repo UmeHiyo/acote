@@ -6,5 +6,12 @@ target 'acote' do
   use_frameworks!
 
   # Pods for acote
+  pod 'Firebase','6.27.0'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
+  pod 'FirebaseUI/Storage'
+  pod 'SVProgressHUD'
 
 end

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>146073250218-q992j3tg7k6ru2t120u0vpm5tjdreuqa.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.146073250218-q992j3tg7k6ru2t120u0vpm5tjdreuqa</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBHM_4blRMBuCscLXXYhQ3M93bLIuXFZGo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>146073250218</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>YUU.acote</string>
+	<key>PROJECT_ID</key>
+	<string>acote-97248</string>
+	<key>STORAGE_BUCKET</key>
+	<string>acote-97248.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:146073250218:ios:bdaf4ddceb5db7320de3d3</string>
+</dict>
+</plist>

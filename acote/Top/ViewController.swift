@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import Firebase
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var changeViewSegment: UISegmentedControl!
@@ -18,6 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var dateSegment: UISegmentedControl!
     @IBOutlet weak var timeSegment: UISegmentedControl!
     @IBOutlet weak var menuButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -28,9 +30,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.changeViewSegment.selectedSegmentIndex = 0
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // currentUserがnilならログインしていない
+        if Auth.auth().currentUser == nil {
+            // ログインしていないときの処理
+            let loginViewController = self.storyboard!.instantiateViewController(withIdentifier: "Login")
+            loginViewController.modalPresentationStyle = .fullScreen
+            self.present(loginViewController, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func segmentChanged(sender: AnyObject) {
-            //セグメントが変更されたときの処理
-            //選択されているセグメントのインデックス
+        //セグメントが変更されたときの処理
+        //選択されているセグメントのインデックス
         let selectedIndex = changeViewSegment.selectedSegmentIndex
         if selectedIndex == 1 {
             Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(self.chageView), userInfo: nil, repeats: false)
@@ -85,6 +98,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // ④ Alertを表示
         present(alert, animated: true, completion: nil)
     }
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
@@ -94,6 +108,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.imageView.image = myImage as? UIImage
         self.imageView.backgroundColor = .systemGray
         picker.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func submitButtonTapped(_ sender: Any) {
+        // ユーザー情報の取得
+        // nilのときはプロフィール入力を促して送信処理をしない
     }
 }
 

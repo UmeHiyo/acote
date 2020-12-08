@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -55,6 +56,13 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // この画面が閉じられたことを他の画面に伝える
+        self.presentingViewController!.beginAppearanceTransition(true, animated: animated)
+        self.presentingViewController!.endAppearanceTransition()
+    }
+    
     @IBAction func closeButton(_ sender: Any) {
         // 非表示時のアニメーションを作成する
         UIView.animate(
@@ -71,7 +79,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -87,8 +95,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.textLabel?.text = "・メールアドレス変更"
         case 2:
             cell.textLabel?.text = "・パスワード変更"
-        default:
+        case 3:
             cell.textLabel?.text = "・前回送信済み処方箋の確認"
+        default:
+            cell.textLabel?.text = "・ログアウト"
         }
         return cell
         
@@ -105,8 +115,31 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         case 2:
             let nextViewController = self.storyboard!.instantiateViewController(identifier: "password")
             self.present(nextViewController, animated: true, completion: nil)
+        case 3:
+            let nextViewController = self.storyboard!.instantiateViewController(identifier: "password")
+            self.present(nextViewController, animated: true, completion: nil)
         default:
-            return
+            let alert: UIAlertController = UIAlertController(title: "注意", message: "ログアウトしてもよろしいですか？", preferredStyle:  UIAlertController.Style.alert)
+            // OKボタン
+            let okAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+                // ボタンが押された時の処理を書く（クロージャ実装）
+                (action: UIAlertAction!) -> Void in
+                // ログアウト
+                try! Auth.auth().signOut()
+                // メニューを閉じる
+                self.dismiss(animated: false, completion: nil)
+            })
+            // キャンセルボタン
+            let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
+                // ボタンが押された時の処理を書く（クロージャ実装）
+                (action: UIAlertAction!) -> Void in
+                self.menuTableView.deselectRow(at: self.menuTableView.indexPathForSelectedRow!, animated: true)
+            })
+            
+            alert.addAction(cancelAction)
+            alert.addAction(okAction)
+            
+            self.present(alert, animated: true, completion: nil)
         }
         
     }

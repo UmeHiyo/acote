@@ -7,10 +7,9 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDataSource {
-    
-    
 
     @IBOutlet weak var changeViewSegment: UISegmentedControl!
     @IBOutlet weak var textFieldView: UIView!
@@ -28,6 +27,17 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewData
         //self.tableView.register(UINib(nibName: "MyMessageCell", bundle: nil), forCellReuseIdentifier: "MyMessageCell")
         self.tableView.register(UINib(nibName: "AnswerMessageCell", bundle: nil), forCellReuseIdentifier: "AnswerMessageCell")
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // currentUserがnilならログインしていない
+        if Auth.auth().currentUser == nil {
+            // ログインしていないときの処理
+            let loginViewController = self.storyboard!.instantiateViewController(withIdentifier: "Login")
+            loginViewController.modalPresentationStyle = .fullScreen
+            self.present(loginViewController, animated: true, completion: nil)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -75,9 +85,6 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewData
         cell.backgroundColor = UIColor.clear
         return cell
     }
-        
-    
-        
     
 }
 
