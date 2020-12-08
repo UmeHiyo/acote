@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		097F2F161E44F5B76BC59712 /* Pods_acote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247DED4D4792AAD94552C66C /* Pods_acote.framework */; };
+		85297EBE257754520041C413 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85297EBD257754520041C413 /* ChatViewController.swift */; };
+		85297ED125788E920041C413 /* MyMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85297ECF25788E920041C413 /* MyMessageCell.swift */; };
+		85297ED225788E920041C413 /* MyMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85297ED025788E920041C413 /* MyMessageCell.xib */; };
+		85297ED7257890B20041C413 /* AnswerMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85297ED5257890B20041C413 /* AnswerMessageCell.swift */; };
+		8543AA38255A59C2007803AE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543AA37255A59C2007803AE /* MenuViewController.swift */; };
+		8543AA3B255A66CD007803AE /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543AA3A255A66CD007803AE /* MailViewController.swift */; };
+		8543AA3E255A66E3007803AE /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543AA3D255A66E3007803AE /* PasswordViewController.swift */; };
+		8543AA41255A66F0007803AE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543AA40255A66F0007803AE /* ProfileViewController.swift */; };
 		858FF398251C45B400E0D0B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858FF397251C45B400E0D0B6 /* AppDelegate.swift */; };
 		858FF39A251C45B400E0D0B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858FF399251C45B400E0D0B6 /* SceneDelegate.swift */; };
 		858FF39C251C45B400E0D0B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858FF39B251C45B400E0D0B6 /* ViewController.swift */; };
@@ -14,9 +23,22 @@
 		858FF3A2251C45B400E0D0B6 /* acote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 858FF3A0251C45B400E0D0B6 /* acote.xcdatamodeld */; };
 		858FF3A4251C45BC00E0D0B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858FF3A3251C45BC00E0D0B6 /* Assets.xcassets */; };
 		858FF3A7251C45BC00E0D0B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858FF3A5251C45BC00E0D0B6 /* LaunchScreen.storyboard */; };
+		85B1CE5A2579E3BD00B6F947 /* AnswerMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85B1CE592579E3BD00B6F947 /* AnswerMessageCell.xib */; };
+		85B1CE5E2579EB1E00B6F947 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1CE5D2579EB1E00B6F947 /* LoginViewController.swift */; };
+		85B1CE612579F4D900B6F947 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1CE602579F4D900B6F947 /* AccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		247DED4D4792AAD94552C66C /* Pods_acote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_acote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40BDE351B430463757052FE3 /* Pods-acote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-acote.release.xcconfig"; path = "Target Support Files/Pods-acote/Pods-acote.release.xcconfig"; sourceTree = "<group>"; };
+		85297EBD257754520041C413 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		85297ECF25788E920041C413 /* MyMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMessageCell.swift; sourceTree = "<group>"; };
+		85297ED025788E920041C413 /* MyMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyMessageCell.xib; sourceTree = "<group>"; };
+		85297ED5257890B20041C413 /* AnswerMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerMessageCell.swift; sourceTree = "<group>"; };
+		8543AA37255A59C2007803AE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		8543AA3A255A66CD007803AE /* MailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
+		8543AA3D255A66E3007803AE /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		8543AA40255A66F0007803AE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		858FF394251C45B400E0D0B6 /* acote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = acote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		858FF397251C45B400E0D0B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		858FF399251C45B400E0D0B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +48,10 @@
 		858FF3A3251C45BC00E0D0B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		858FF3A6251C45BC00E0D0B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		858FF3A8251C45BC00E0D0B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85B1CE592579E3BD00B6F947 /* AnswerMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerMessageCell.xib; sourceTree = "<group>"; };
+		85B1CE5D2579EB1E00B6F947 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		85B1CE602579F4D900B6F947 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		8C4B87AA88AD7CDDF24D2DF6 /* Pods-acote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-acote.debug.xcconfig"; path = "Target Support Files/Pods-acote/Pods-acote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +59,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				097F2F161E44F5B76BC59712 /* Pods_acote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85297EDA257890C60041C413 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				85B1CE592579E3BD00B6F947 /* AnswerMessageCell.xib */,
+				85297ED5257890B20041C413 /* AnswerMessageCell.swift */,
+				85297ECF25788E920041C413 /* MyMessageCell.swift */,
+				85297ED025788E920041C413 /* MyMessageCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
 		858FF38B251C45B400E0D0B6 = {
 			isa = PBXGroup;
 			children = (
 				858FF396251C45B400E0D0B6 /* acote */,
 				858FF395251C45B400E0D0B6 /* Products */,
+				B98DB699874DB273A7E94B04 /* Pods */,
+				CA3FA259F4BB7F151A54FFB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,15 +99,40 @@
 			isa = PBXGroup;
 			children = (
 				858FF397251C45B400E0D0B6 /* AppDelegate.swift */,
-				858FF399251C45B400E0D0B6 /* SceneDelegate.swift */,
 				858FF39B251C45B400E0D0B6 /* ViewController.swift */,
+				85B1CE5D2579EB1E00B6F947 /* LoginViewController.swift */,
+				85B1CE602579F4D900B6F947 /* AccountViewController.swift */,
+				8543AA37255A59C2007803AE /* MenuViewController.swift */,
 				858FF39D251C45B400E0D0B6 /* Main.storyboard */,
+				858FF399251C45B400E0D0B6 /* SceneDelegate.swift */,
+				85297EDA257890C60041C413 /* Xib */,
+				85297EBD257754520041C413 /* ChatViewController.swift */,
+				8543AA3A255A66CD007803AE /* MailViewController.swift */,
+				8543AA3D255A66E3007803AE /* PasswordViewController.swift */,
+				8543AA40255A66F0007803AE /* ProfileViewController.swift */,
 				858FF3A3251C45BC00E0D0B6 /* Assets.xcassets */,
 				858FF3A5251C45BC00E0D0B6 /* LaunchScreen.storyboard */,
 				858FF3A8251C45BC00E0D0B6 /* Info.plist */,
 				858FF3A0251C45B400E0D0B6 /* acote.xcdatamodeld */,
 			);
 			path = acote;
+			sourceTree = "<group>";
+		};
+		B98DB699874DB273A7E94B04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C4B87AA88AD7CDDF24D2DF6 /* Pods-acote.debug.xcconfig */,
+				40BDE351B430463757052FE3 /* Pods-acote.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA3FA259F4BB7F151A54FFB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				247DED4D4792AAD94552C66C /* Pods_acote.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +142,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 858FF3AB251C45BC00E0D0B6 /* Build configuration list for PBXNativeTarget "acote" */;
 			buildPhases = (
+				F507E256BAF56771D9FD81D4 /* [CP] Check Pods Manifest.lock */,
 				858FF390251C45B400E0D0B6 /* Sources */,
 				858FF391251C45B400E0D0B6 /* Frameworks */,
 				858FF392251C45B400E0D0B6 /* Resources */,
@@ -129,22 +195,58 @@
 			buildActionMask = 2147483647;
 			files = (
 				858FF3A7251C45BC00E0D0B6 /* LaunchScreen.storyboard in Resources */,
+				85297ED225788E920041C413 /* MyMessageCell.xib in Resources */,
 				858FF3A4251C45BC00E0D0B6 /* Assets.xcassets in Resources */,
 				858FF39F251C45B400E0D0B6 /* Main.storyboard in Resources */,
+				85B1CE5A2579E3BD00B6F947 /* AnswerMessageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F507E256BAF56771D9FD81D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-acote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		858FF390251C45B400E0D0B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B1CE5E2579EB1E00B6F947 /* LoginViewController.swift in Sources */,
+				85297ED7257890B20041C413 /* AnswerMessageCell.swift in Sources */,
+				85B1CE612579F4D900B6F947 /* AccountViewController.swift in Sources */,
 				858FF39C251C45B400E0D0B6 /* ViewController.swift in Sources */,
+				8543AA38255A59C2007803AE /* MenuViewController.swift in Sources */,
 				858FF398251C45B400E0D0B6 /* AppDelegate.swift in Sources */,
+				8543AA3E255A66E3007803AE /* PasswordViewController.swift in Sources */,
 				858FF3A2251C45B400E0D0B6 /* acote.xcdatamodeld in Sources */,
 				858FF39A251C45B400E0D0B6 /* SceneDelegate.swift in Sources */,
+				8543AA41255A66F0007803AE /* ProfileViewController.swift in Sources */,
+				85297ED125788E920041C413 /* MyMessageCell.swift in Sources */,
+				85297EBE257754520041C413 /* ChatViewController.swift in Sources */,
+				8543AA3B255A66CD007803AE /* MailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,11 +388,13 @@
 		};
 		858FF3AC251C45BC00E0D0B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C4B87AA88AD7CDDF24D2DF6 /* Pods-acote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TMT9VHMH55;
 				INFOPLIST_FILE = acote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +408,13 @@
 		};
 		858FF3AD251C45BC00E0D0B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40BDE351B430463757052FE3 /* Pods-acote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TMT9VHMH55;
 				INFOPLIST_FILE = acote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
