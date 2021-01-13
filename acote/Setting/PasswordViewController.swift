@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SVProgressHUD
 
-class PasswordViewController: UIViewController {
+class PasswordViewController: CommonViewController {
 
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordTextField2: UITextField!
@@ -21,8 +21,8 @@ class PasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.passwordTextField.delegate = self
+        self.passwordTextField2.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -70,16 +70,16 @@ class PasswordViewController: UIViewController {
                         return
                     }
                     else {
-                        // メールアドレス更新不可
-                        print("DEBUG_PRINT: " + error.localizedDescription)
+                        // パスワード更新不可
+                        print("<<パスワード変更エラー>>: " + error.localizedDescription)
                         SVProgressHUD.showError(withStatus: "パスワードが正しくありません")
                         SVProgressHUD.dismiss(withDelay: 2)
                         return
                     }
                     
                 }
-                print("DEBUG_PRINT: [displayName = \(String(describing: user.uid))]のパスワード設定に成功しました。")
-                SVProgressHUD.showError(withStatus: "変更が完了しました！")
+                print("<<パスワード変更成功>>: [displayName = \(String(describing: user.uid))]のパスワード設定に成功しました。")
+                SVProgressHUD.showSuccess(withStatus: "変更が完了しました！")
                 SVProgressHUD.dismiss(withDelay: 1)
                 // 画面を閉じてタブ画面に戻る
                 self.dismiss(animated: true, completion: nil)

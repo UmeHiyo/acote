@@ -10,6 +10,8 @@ import UIKit
 
 class AnswerMessageCell: UITableViewCell {
 
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +22,13 @@ class AnswerMessageCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setMessage(message: Message) {
+        self.label.text = message.content
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy.MM.dd HH:mm"
+        self.dateLabel.text = dateFormatter.string(from: message.date)
+    }
+    
     
 }

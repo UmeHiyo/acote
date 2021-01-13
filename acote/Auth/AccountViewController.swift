@@ -10,22 +10,47 @@ import UIKit
 import Firebase
 import SVProgressHUD
 
-class AccountViewController: UIViewController {
+class AccountViewController: CommonViewController {
 
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var mailTextField2: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordTextField2: UITextField!
+    @IBOutlet weak var kiyakuStackView: UIStackView!
+    var isAgreed = false
+    @IBOutlet weak var nextButton: CustomButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.mailTextField.delegate = self
+        self.mailTextField2.delegate = self
+        self.passwordTextField.delegate = self
+        self.passwordTextField2.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if !isAgreed {
+            self.nextButton.isEnabled = false
+            self.nextButton.backgroundColor = UIColor.lightGray
+            self.nextButton.layer.shadowOpacity = 0
+        }
+        else {
+            self.nextButton.isEnabled = true
+            self.nextButton.backgroundColor = Colors.solid
+            self.nextButton.layer.shadowOpacity = 0.6
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextViewController = segue.destination as! ProfileViewController
-        nextViewController.isFromAccountViewController = true
+        if segue.destination is ProfileViewController {
+            let nextViewController = segue.destination as! ProfileViewController
+            nextViewController.isFromAccountViewController = true
+        }
+    }
+    
+    @IBAction func kiyakuButtonTapped(_ sender: Any) {
+        let kiyakuViewController = self.storyboard!.instantiateViewController(identifier: "kiyaku")
+        self.present(kiyakuViewController, animated: true, completion: nil)
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
@@ -51,14 +76,13 @@ class AccountViewController: UIViewController {
         Auth.auth().createUser(withEmail: self.mailTextField.text!, password: self.passwordTextField.text!) { authResult, error in
             if let error = error {
                 // エラーがあったら原因をprintして、returnすることで以降の処理を実行せずに処理を終了する
-                print("DEBUG_PRINT: " + error.localizedDescription)
+                print("<<新規登録エラー>>: " + error.localizedDescription)
                 SVProgressHUD.showError(withStatus: "メールアドレスかパスワードが正しくありません。")
                 SVProgressHUD.dismiss(withDelay: 2)
                 return
             }
-            print("DEBUG_PRINT: ユーザー作成に成功しました。")
+            print("<<新規登録成功>>: ユーザー作成に成功しました。")
             self.performSegue(withIdentifier: "toProfile", sender: nil)
         }
     }
-
 }

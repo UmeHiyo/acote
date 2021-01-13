@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import SVProgressHUD
 import Firebase
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -15,11 +16,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var selectPhotoLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var haisouSegment: UISegmentedControl!
+    // TODO：プロフィールの住所と照らし合わせてエラーにする
     @IBOutlet weak var honjitsuSegment: UISegmentedControl!
     @IBOutlet weak var dateSegment: UISegmentedControl!
     @IBOutlet weak var timeSegment: UISegmentedControl!
     @IBOutlet weak var menuButton: UIButton!
-    
+    // 最初に処方箋を送信する時にユーザーのプロフィール情報が存在しないときはユーザー情報の登録を指示
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -46,12 +48,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         //選択されているセグメントのインデックス
         let selectedIndex = changeViewSegment.selectedSegmentIndex
         if selectedIndex == 1 {
-            Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(self.chageView), userInfo: nil, repeats: false)
+            Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(self.changeView), userInfo: nil, repeats: false)
             
         }
     }
     
-    @objc func chageView() {
+    @objc func changeView() {
         self.performSegue(withIdentifier: "segue", sender: nil)
     }
     
@@ -113,6 +115,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func submitButtonTapped(_ sender: Any) {
         // ユーザー情報の取得
         // nilのときはプロフィール入力を促して送信処理をしない
+        // 全て登録されているか
+        SVProgressHUD.show(withStatus: "処方箋送信中")
+        SVProgressHUD.dismiss(withDelay: 1.0)
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.finishedSubmit), userInfo: nil, repeats: false)
+        
+    }
+    
+    @objc func finishedSubmit() {
+        SVProgressHUD.showSuccess(withStatus: "送信完了しました！")
+        SVProgressHUD.dismiss(withDelay: 0.8)
     }
 }
 

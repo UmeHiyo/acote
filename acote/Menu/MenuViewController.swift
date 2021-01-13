@@ -20,8 +20,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.menuTableView.delegate = self
         self.menuTableView.dataSource = self
         self.isFirstAppearing = true
-        
-        // Do any additional setup after loading the view.
+        self.menuTableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,9 +84,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let backView = UIView()
-        backView.backgroundColor = UIColor.init(red: 255 / 255, green: 126 / 255, blue: 121 / 255, alpha: 1)
+        backView.backgroundColor = Colors.midiSolid
         cell.selectedBackgroundView = backView
-        cell.backgroundColor = UIColor.init(red: 255 / 255, green: 222 / 255, blue: 222 / 255, alpha: 1)
+        cell.backgroundColor = Colors.back
         switch indexPath.row {
         case 0:
             cell.textLabel?.text = "・個人情報登録および変更"

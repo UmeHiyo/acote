@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SVProgressHUD
 
-class LoginViewController: UIViewController {
+class LoginViewController: CommonViewController {
 
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -20,6 +20,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mailTextField.delegate = self
+        self.passwordTextField.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -34,6 +36,11 @@ class LoginViewController: UIViewController {
         }
     }
     
+    // 画面タップでキーボードを閉じる
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func loginButtonTapped(_ sender: Any) {
         if self.mailTextField.text!.isEmpty || self.passwordTextField.text!.isEmpty {
             SVProgressHUD.showError(withStatus: "すべての項目に入力してください")
@@ -45,17 +52,20 @@ class LoginViewController: UIViewController {
         
         Auth.auth().signIn(withEmail: self.mailTextField.text!, password: self.passwordTextField.text!) { authResult, error in
             if let error = error {
-                print("DEBUG_PRINT: " + error.localizedDescription)
+                print("<<ログインエラー>>: " + error.localizedDescription)
                 SVProgressHUD.showError(withStatus: "メールアドレスもしくはパスワードが誤っています。")
                 SVProgressHUD.dismiss(withDelay: 2)
                 return
             }
-            print("DEBUG_PRINT: ログインに成功しました。")
+            print("<<ログイン成功>>: ログインに成功しました。")
             // HUDを消す
             SVProgressHUD.dismiss()
             // 画面を閉じて元の画面に戻る
             self.dismiss(animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func unwind(segue: UIStoryboardSegue) {
     }
 
 }

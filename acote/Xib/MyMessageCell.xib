@@ -22,7 +22,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFT-ny-ogz">
                                 <rect key="frame" x="0.0" y="0.0" width="475" height="73"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ここに送信された文字がたくさんあるときここに送信された文字がたくさんあるときここに送信された文字がたくさんあるときここに送信された文字がたくさんあるとき" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="es5-79-Jv5">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020.10.10_15:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVH-Uh-e27">
+                                        <rect key="frame" x="431" y="75" width="69" height="10"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="es5-79-Jv5">
                                         <rect key="frame" x="10" y="10" width="455" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="yl8-UY-zRo"/>
@@ -37,6 +43,7 @@
                                     <constraint firstAttribute="trailing" secondItem="es5-79-Jv5" secondAttribute="trailing" constant="10" id="5h2-if-KWQ"/>
                                     <constraint firstItem="es5-79-Jv5" firstAttribute="leading" secondItem="kFT-ny-ogz" secondAttribute="leading" constant="10" id="Gb8-zY-Qat"/>
                                     <constraint firstItem="es5-79-Jv5" firstAttribute="top" secondItem="kFT-ny-ogz" secondAttribute="top" constant="10" id="j68-L5-1XP"/>
+                                    <constraint firstItem="gVH-Uh-e27" firstAttribute="top" secondItem="kFT-ny-ogz" secondAttribute="bottom" constant="2" id="kKT-fI-H0C"/>
                                     <constraint firstAttribute="bottom" secondItem="es5-79-Jv5" secondAttribute="bottom" constant="10" id="pj1-Pa-uBI"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -59,6 +66,7 @@
                             <constraint firstItem="7Uj-TT-69A" firstAttribute="leading" secondItem="kFT-ny-ogz" secondAttribute="trailing" id="JYW-vA-k4L"/>
                             <constraint firstAttribute="trailing" secondItem="7Uj-TT-69A" secondAttribute="trailing" id="M7x-Ww-SHz"/>
                             <constraint firstAttribute="bottom" secondItem="kFT-ny-ogz" secondAttribute="bottom" id="NN1-o8-Wwq"/>
+                            <constraint firstAttribute="trailing" secondItem="gVH-Uh-e27" secondAttribute="trailing" id="XZO-MH-jnU"/>
                             <constraint firstItem="kFT-ny-ogz" firstAttribute="leading" secondItem="p3v-83-RSO" secondAttribute="leading" id="ddD-s4-hLo"/>
                         </constraints>
                     </stackView>
@@ -72,6 +80,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="gVH-Uh-e27" id="q4d-yS-lb2"/>
+                <outlet property="label" destination="es5-79-Jv5" id="98u-xS-Ly3"/>
+            </connections>
             <point key="canvasLocation" x="-75.362318840579718" y="112.83482142857142"/>
         </tableViewCell>
     </objects>

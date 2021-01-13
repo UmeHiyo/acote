@@ -36,7 +36,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFT-ny-ogz">
                                 <rect key="frame" x="80" y="0.0" width="420" height="73"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ここに送信された文字が" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="es5-79-Jv5">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="es5-79-Jv5">
                                         <rect key="frame" x="10" y="10" width="400" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="yl8-UY-zRo"/>
@@ -45,11 +45,19 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020.10.10_15:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QX5-rI-Nv0">
+                                        <rect key="frame" x="341" y="75" width="69" height="10"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="QX5-rI-Nv0" firstAttribute="trailing" secondItem="es5-79-Jv5" secondAttribute="trailing" id="3zw-eq-rVL"/>
                                     <constraint firstAttribute="trailing" secondItem="es5-79-Jv5" secondAttribute="trailing" constant="10" id="5h2-if-KWQ"/>
                                     <constraint firstItem="es5-79-Jv5" firstAttribute="leading" secondItem="kFT-ny-ogz" secondAttribute="leading" constant="10" id="Gb8-zY-Qat"/>
+                                    <constraint firstItem="QX5-rI-Nv0" firstAttribute="top" secondItem="kFT-ny-ogz" secondAttribute="bottom" constant="2" id="UoQ-PH-W3L"/>
                                     <constraint firstItem="es5-79-Jv5" firstAttribute="top" secondItem="kFT-ny-ogz" secondAttribute="top" constant="10" id="j68-L5-1XP"/>
                                     <constraint firstAttribute="bottom" secondItem="es5-79-Jv5" secondAttribute="bottom" constant="10" id="pj1-Pa-uBI"/>
                                 </constraints>
@@ -83,6 +91,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="QX5-rI-Nv0" id="B6t-Qb-X3a"/>
+                <outlet property="label" destination="es5-79-Jv5" id="FQI-h2-K9P"/>
+            </connections>
             <point key="canvasLocation" x="-75.362318840579718" y="112.83482142857142"/>
         </tableViewCell>
     </objects>

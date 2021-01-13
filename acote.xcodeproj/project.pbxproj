@@ -8,14 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		097F2F161E44F5B76BC59712 /* Pods_acote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247DED4D4792AAD94552C66C /* Pods_acote.framework */; };
+		85134F252580B007002BBB75 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85134F242580B007002BBB75 /* CommonViewController.swift */; };
+		851EA8A8257F6DCE00B2E993 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851EA8A7257F6DCE00B2E993 /* User.swift */; };
 		85297EBE257754520041C413 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85297EBD257754520041C413 /* ChatViewController.swift */; };
 		85297ED125788E920041C413 /* MyMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85297ECF25788E920041C413 /* MyMessageCell.swift */; };
 		85297ED225788E920041C413 /* MyMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85297ED025788E920041C413 /* MyMessageCell.xib */; };
 		85297ED7257890B20041C413 /* AnswerMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85297ED5257890B20041C413 /* AnswerMessageCell.swift */; };
+		853D7B9E2582034E009A94D9 /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D7B9D2582034E009A94D9 /* Prescription.swift */; };
 		8543AA38255A59C2007803AE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543AA37255A59C2007803AE /* MenuViewController.swift */; };
 		8543AA3B255A66CD007803AE /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543AA3A255A66CD007803AE /* MailViewController.swift */; };
 		8543AA3E255A66E3007803AE /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543AA3D255A66E3007803AE /* PasswordViewController.swift */; };
 		8543AA41255A66F0007803AE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543AA40255A66F0007803AE /* ProfileViewController.swift */; };
+		854F3DD8258086B10072D7B4 /* CustomBtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854F3DD7258086B10072D7B4 /* CustomBtton.swift */; };
+		855CD04425AD6284002C19D7 /* kiyaku.txt in Resources */ = {isa = PBXBuildFile; fileRef = 855CD04325AD6283002C19D7 /* kiyaku.txt */; };
+		855CD04825AD7158002C19D7 /* KiyakuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD04725AD7158002C19D7 /* KiyakuViewController.swift */; };
+		855CD04C25AEB6E1002C19D7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855CD04B25AEB6E0002C19D7 /* Colors.swift */; };
 		8568A61B257F27AC0042E4FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8568A61A257F27AC0042E4FB /* GoogleService-Info.plist */; };
 		8568A63A257F31D60042E4FB /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568A639257F31D60042E4FB /* CustomTextField.swift */; };
 		858FF398251C45B400E0D0B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858FF397251C45B400E0D0B6 /* AppDelegate.swift */; };
@@ -28,19 +35,28 @@
 		85B1CE5A2579E3BD00B6F947 /* AnswerMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85B1CE592579E3BD00B6F947 /* AnswerMessageCell.xib */; };
 		85B1CE5E2579EB1E00B6F947 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1CE5D2579EB1E00B6F947 /* LoginViewController.swift */; };
 		85B1CE612579F4D900B6F947 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1CE602579F4D900B6F947 /* AccountViewController.swift */; };
+		85C1822125826461002F17C1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C1822025826461002F17C1 /* Message.swift */; };
+		85C6E66C25A56C9A004F2578 /* AddressUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C6E66B25A56C9A004F2578 /* AddressUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		247DED4D4792AAD94552C66C /* Pods_acote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_acote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40BDE351B430463757052FE3 /* Pods-acote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-acote.release.xcconfig"; path = "Target Support Files/Pods-acote/Pods-acote.release.xcconfig"; sourceTree = "<group>"; };
+		85134F242580B007002BBB75 /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
+		851EA8A7257F6DCE00B2E993 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		85297EBD257754520041C413 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		85297ECF25788E920041C413 /* MyMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMessageCell.swift; sourceTree = "<group>"; };
 		85297ED025788E920041C413 /* MyMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyMessageCell.xib; sourceTree = "<group>"; };
 		85297ED5257890B20041C413 /* AnswerMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerMessageCell.swift; sourceTree = "<group>"; };
+		853D7B9D2582034E009A94D9 /* Prescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prescription.swift; sourceTree = "<group>"; };
 		8543AA37255A59C2007803AE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8543AA3A255A66CD007803AE /* MailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
 		8543AA3D255A66E3007803AE /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		8543AA40255A66F0007803AE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		854F3DD7258086B10072D7B4 /* CustomBtton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBtton.swift; sourceTree = "<group>"; };
+		855CD04325AD6283002C19D7 /* kiyaku.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kiyaku.txt; sourceTree = "<group>"; };
+		855CD04725AD7158002C19D7 /* KiyakuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiyakuViewController.swift; sourceTree = "<group>"; };
+		855CD04B25AEB6E0002C19D7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8568A61A257F27AC0042E4FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8568A639257F31D60042E4FB /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		858FF394251C45B400E0D0B6 /* acote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = acote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +71,8 @@
 		85B1CE592579E3BD00B6F947 /* AnswerMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerMessageCell.xib; sourceTree = "<group>"; };
 		85B1CE5D2579EB1E00B6F947 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		85B1CE602579F4D900B6F947 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		85C1822025826461002F17C1 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		85C6E66B25A56C9A004F2578 /* AddressUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressUtil.swift; sourceTree = "<group>"; };
 		8C4B87AA88AD7CDDF24D2DF6 /* Pods-acote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-acote.debug.xcconfig"; path = "Target Support Files/Pods-acote/Pods-acote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +111,7 @@
 				8543AA3A255A66CD007803AE /* MailViewController.swift */,
 				8543AA3D255A66E3007803AE /* PasswordViewController.swift */,
 				8543AA40255A66F0007803AE /* ProfileViewController.swift */,
+				855CD04725AD7158002C19D7 /* KiyakuViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -106,6 +125,17 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		851EA8A6257F6DAD00B2E993 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				851EA8A7257F6DCE00B2E993 /* User.swift */,
+				853D7B9D2582034E009A94D9 /* Prescription.swift */,
+				85C1822025826461002F17C1 /* Message.swift */,
+				85C6E66B25A56C9A004F2578 /* AddressUtil.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		85297EDA257890C60041C413 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +144,8 @@
 				85297ED5257890B20041C413 /* AnswerMessageCell.swift */,
 				85297ECF25788E920041C413 /* MyMessageCell.swift */,
 				85297ED025788E920041C413 /* MyMessageCell.xib */,
+				854F3DD7258086B10072D7B4 /* CustomBtton.swift */,
+				855CD04B25AEB6E0002C19D7 /* Colors.swift */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -142,15 +174,18 @@
 				858FF397251C45B400E0D0B6 /* AppDelegate.swift */,
 				858FF399251C45B400E0D0B6 /* SceneDelegate.swift */,
 				858FF39D251C45B400E0D0B6 /* Main.storyboard */,
+				85134F242580B007002BBB75 /* CommonViewController.swift */,
 				851EA89D257F672200B2E993 /* Top */,
 				851EA89F257F673B00B2E993 /* Menu */,
 				851EA8A5257F679400B2E993 /* Auth */,
 				851EA8A4257F676B00B2E993 /* Setting */,
+				851EA8A6257F6DAD00B2E993 /* Model */,
 				85297EDA257890C60041C413 /* Xib */,
 				858FF3A3251C45BC00E0D0B6 /* Assets.xcassets */,
 				858FF3A5251C45BC00E0D0B6 /* LaunchScreen.storyboard */,
 				8568A61A257F27AC0042E4FB /* GoogleService-Info.plist */,
 				858FF3A8251C45BC00E0D0B6 /* Info.plist */,
+				855CD04325AD6283002C19D7 /* kiyaku.txt */,
 				858FF3A0251C45B400E0D0B6 /* acote.xcdatamodeld */,
 			);
 			path = acote;
@@ -234,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				858FF3A7251C45BC00E0D0B6 /* LaunchScreen.storyboard in Resources */,
+				855CD04425AD6284002C19D7 /* kiyaku.txt in Resources */,
 				8568A61B257F27AC0042E4FB /* GoogleService-Info.plist in Resources */,
 				85297ED225788E920041C413 /* MyMessageCell.xib in Resources */,
 				858FF3A4251C45BC00E0D0B6 /* Assets.xcassets in Resources */,
@@ -292,18 +328,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				8568A63A257F31D60042E4FB /* CustomTextField.swift in Sources */,
+				855CD04C25AEB6E1002C19D7 /* Colors.swift in Sources */,
+				85C6E66C25A56C9A004F2578 /* AddressUtil.swift in Sources */,
 				85B1CE5E2579EB1E00B6F947 /* LoginViewController.swift in Sources */,
 				85297ED7257890B20041C413 /* AnswerMessageCell.swift in Sources */,
 				85B1CE612579F4D900B6F947 /* AccountViewController.swift in Sources */,
+				855CD04825AD7158002C19D7 /* KiyakuViewController.swift in Sources */,
 				858FF39C251C45B400E0D0B6 /* ViewController.swift in Sources */,
 				8543AA38255A59C2007803AE /* MenuViewController.swift in Sources */,
 				858FF398251C45B400E0D0B6 /* AppDelegate.swift in Sources */,
+				85C1822125826461002F17C1 /* Message.swift in Sources */,
 				8543AA3E255A66E3007803AE /* PasswordViewController.swift in Sources */,
+				851EA8A8257F6DCE00B2E993 /* User.swift in Sources */,
+				853D7B9E2582034E009A94D9 /* Prescription.swift in Sources */,
 				858FF3A2251C45B400E0D0B6 /* acote.xcdatamodeld in Sources */,
 				858FF39A251C45B400E0D0B6 /* SceneDelegate.swift in Sources */,
+				85134F252580B007002BBB75 /* CommonViewController.swift in Sources */,
 				8543AA41255A66F0007803AE /* ProfileViewController.swift in Sources */,
 				85297ED125788E920041C413 /* MyMessageCell.swift in Sources */,
 				85297EBE257754520041C413 /* ChatViewController.swift in Sources */,
+				854F3DD8258086B10072D7B4 /* CustomBtton.swift in Sources */,
 				8543AA3B255A66CD007803AE /* MailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,7 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -434,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
