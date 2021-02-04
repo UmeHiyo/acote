@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VcN-9A-TsD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VcN-9A-TsD">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -143,10 +143,25 @@
             </objects>
             <point key="canvasLocation" x="144.92753623188406" y="719.86607142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Image View Controller-->
+        <scene sceneID="tkh-Ue-SGU">
+            <objects>
+                <viewController storyboardIdentifier="image" modalPresentationStyle="fullScreen" id="SK1-MI-xWy" customClass="ImageViewController" customModule="acote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8pW-EX-282">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2uU-be-S1w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Xh-Ao-QZN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="914" y="720"/>
+        </scene>
+        <!--Top View Controller-->
         <scene sceneID="bQP-Fw-IfK">
             <objects>
-                <viewController id="VcN-9A-TsD" customClass="ViewController" customModule="acote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VcN-9A-TsD" customClass="TopViewController" customModule="acote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ak7-cD-Sf8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -229,6 +244,9 @@
                                                     <segment title="薬局で受け取り"/>
                                                     <segment title="ご自宅に配達"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="haisouSegmentChanged:" destination="VcN-9A-TsD" eventType="valueChanged" id="rV1-F8-k94"/>
+                                                </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QXK-kt-ur1">
                                                 <rect key="frame" x="30" y="280" width="315" height="31"/>
@@ -240,6 +258,9 @@
                                                     <segment title="本日受け取り希望"/>
                                                     <segment title="翌日以降受け取り希望"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="honjitsuSegmentChanged:" destination="VcN-9A-TsD" eventType="valueChanged" id="kgP-US-jpR"/>
+                                                </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8id-qA-fIL">
                                                 <rect key="frame" x="30" y="360" width="315" height="31"/>
@@ -271,18 +292,36 @@
                                                 <attributedString key="attributedText">
                                                     <fragment content="平日：">
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
+                                                            <font key="NSOriginalFont" metaFont="menu" size="14"/>
                                                         </attributes>
                                                     </fragment>
-                                                    <fragment content="10:00-19:00">
+                                                    <fragment content="10:00-">
                                                         <attributes>
                                                             <font key="NSFont" size="14" name="Helvetica-Bold"/>
                                                             <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
                                                         </attributes>
                                                     </fragment>
-                                                    <fragment content="  土曜：">
+                                                    <fragment content="18">
+                                                        <attributes>
+                                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=":00">
+                                                        <attributes>
+                                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="  ">
                                                         <attributes>
                                                             <font key="NSFont" metaFont="menu" size="14"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="土曜：">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
+                                                            <font key="NSOriginalFont" metaFont="menu" size="14"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="10:00-12:00">
@@ -293,7 +332,8 @@
                                                     </fragment>
                                                     <fragment content="　です。">
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
+                                                            <font key="NSOriginalFont" metaFont="menu" size="14"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -354,6 +394,9 @@
                                                     <segment title="日付③"/>
                                                     <segment title="日付④"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="dateSegmentChanged:" destination="VcN-9A-TsD" eventType="valueChanged" id="IyB-Gd-7QH"/>
+                                                </connections>
                                             </segmentedControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bN6-OD-vSz" customClass="CustomButton" customModule="acote" customModuleProvider="target">
                                                 <rect key="frame" x="137.66666666666666" y="551" width="100" height="36"/>
@@ -475,6 +518,7 @@
                         <outlet property="honjitsuSegment" destination="QXK-kt-ur1" id="gud-KA-cJ5"/>
                         <outlet property="imageView" destination="dkF-LZ-zLy" id="oX2-SI-XqL"/>
                         <outlet property="menuButton" destination="Wrf-0k-2zL" id="HTP-OC-nDL"/>
+                        <outlet property="myView" destination="Uvy-qh-qvf" id="Hsp-B4-Ffa"/>
                         <outlet property="selectPhotoLabel" destination="sOJ-Ps-GYG" id="ja5-uj-JFl"/>
                         <outlet property="timeSegment" destination="8id-qA-fIL" id="7Xq-o0-afg"/>
                         <segue destination="yfE-Uj-Y2I" kind="show" identifier="segue" animates="NO" id="ABo-Pa-HmT"/>
@@ -1040,7 +1084,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="RFI-xH-LdS"/>
                     <connections>
-                        <outlet property="adressTextField" destination="teJ-vP-CSS" id="hKW-sq-gEc"/>
+                        <outlet property="addressTextField" destination="teJ-vP-CSS" id="hKW-sq-gEc"/>
                         <outlet property="birthdayTextField" destination="upv-7V-xry" id="KET-hf-htr"/>
                         <outlet property="closeButton" destination="ALz-Em-f3P" id="cS4-LN-N1Y"/>
                         <outlet property="nameTextField" destination="sO0-dL-hnC" id="rou-Da-PUl"/>
@@ -1048,7 +1092,6 @@
                         <outlet property="postNo2TextField" destination="r1i-1z-43g" id="ebX-Wb-K81"/>
                         <outlet property="scrollView" destination="Glx-yH-hZx" id="3cf-Ce-iMv"/>
                         <outlet property="sexSegment" destination="upL-Kd-QJf" id="wpQ-w3-34l"/>
-                        <outlet property="submitButton" destination="cKP-s8-J2N" id="bc0-X1-F6z"/>
                         <outlet property="telTextField" destination="IVP-sX-WkG" id="Hr2-eZ-fja"/>
                     </connections>
                 </viewController>
@@ -1353,7 +1396,6 @@
                                         </state>
                                         <connections>
                                             <action selector="kiyakuButtonTapped:" destination="X7A-Oe-Fvu" eventType="touchUpInside" id="3UB-g5-bvW"/>
-                                            <action selector="kiyakuButtonTapped:" destination="gFs-1a-aUQ" eventType="touchUpInside" id="n0h-JV-0JE"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="に同意して次へ進む" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elN-SB-C8c">
@@ -1373,7 +1415,7 @@
                                     <constraint firstAttribute="height" constant="30" id="bxj-VO-Fsx"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ey3-yx-ugW" customClass="CustomButton" customModule="acote" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ey3-yx-ugW" customClass="CustomButton" customModule="acote" customModuleProvider="target">
                                 <rect key="frame" x="10" y="74" width="80" height="36"/>
                                 <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>

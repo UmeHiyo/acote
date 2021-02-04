@@ -13,5 +13,6 @@ target 'acote' do
   pod 'Firebase/Storage'
   pod 'FirebaseUI/Storage'
   pod 'SVProgressHUD'
+  pod 'CalculateCalendarLogic'
 
 end

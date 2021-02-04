@@ -19,6 +19,8 @@ class ChatViewController: CommonViewController, UITextViewDelegate, UITableViewD
     var existProfile = false
     @IBOutlet weak var textFieldViewHeight: NSLayoutConstraint!
     var messageArray: [Message] = []
+    // Firestoreのリスナー
+    var listener: ListenerRegistration?
     
     // 最初にメッセージを送信する時にユーザーのプロフィール情報が存在しないときはユーザー情報の登録を指示
     override func viewDidLoad() {
@@ -45,7 +47,7 @@ class ChatViewController: CommonViewController, UITextViewDelegate, UITableViewD
             return
         }
         // メッセージのコレクションはユーザーのプロフィールドキュメントに紐づく
-        Firestore.firestore().collection("users").document(Auth.auth().currentUser!.uid).collection("messages").order(by: "date", descending: false)
+        self.listener = Firestore.firestore().collection("users").document(Auth.auth().currentUser!.uid).collection("messages").order(by: "date", descending: false)
             .addSnapshotListener { (querySnapshot :QuerySnapshot?, error: Error?) -> Void  in
                 if let error = error {
                     print("DEBUG_PRINT: snapshotの取得が失敗しました。 \(error)")
@@ -81,6 +83,13 @@ class ChatViewController: CommonViewController, UITextViewDelegate, UITableViewD
                 return
             }
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("DEBUG_PRINT: viewWillDisappear")
+        // listenerを削除して監視を停止する
+        self.listener?.remove()
     }
     
     @IBAction func segmentChanged(sender: AnyObject) {

@@ -12,7 +12,7 @@ class User: NSObject {
     var id: String
     var name: String?
     var postNo: String?
-    var adress: String?
+    var address: String?
     var tel: String?
     var sex: String?
     var birthday: Date?
@@ -24,7 +24,7 @@ class User: NSObject {
         
         self.name = userDic["name"] as? String
         self.postNo = userDic["postNo"] as? String
-        self.adress = userDic["adress"] as? String
+        self.address = userDic["address"] as? String
         self.tel = userDic["tel"] as? String
         self.sex = userDic["sex"] as? String
         

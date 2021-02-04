@@ -16,7 +16,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var postNo1TextField: UITextField!
     @IBOutlet weak var postNo2TextField: UITextField!
-    @IBOutlet weak var adressTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var telTextField: UITextField!
     @IBOutlet weak var birthdayTextField: UITextField!
     @IBOutlet weak var sexSegment: UISegmentedControl!
@@ -56,7 +56,7 @@ class ProfileViewController: UIViewController {
             if let subLocality = address?.subLocality {
                 addressStr += subLocality  // → 〇〇町
             }
-            self.adressTextField.text = addressStr
+            self.addressTextField.text = addressStr
         }
     }
     
@@ -93,7 +93,7 @@ class ProfileViewController: UIViewController {
                 let postNo: [String] = user.postNo!.components(separatedBy: "-")
                 self.postNo1TextField.text = postNo.first!
                 self.postNo2TextField.text = postNo.last!
-                self.adressTextField.text = user.adress!
+                self.addressTextField.text = user.address!
                 self.telTextField.text = user.tel!
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "yyyyMMdd"
@@ -121,7 +121,7 @@ class ProfileViewController: UIViewController {
         let name = self.nameTextField.text!
         let postNo1 = self.postNo1TextField.text!
         let postNo2 = self.postNo2TextField.text!
-        let adress = self.adressTextField.text!
+        let address = self.addressTextField.text! // TODO: アドレスはすべて全角にする
         let tel = self.telTextField.text!
         let strBirthday = self.birthdayTextField.text!
         
@@ -137,7 +137,7 @@ class ProfileViewController: UIViewController {
             SVProgressHUD.showError(withStatus: "全ての項目を入力してください。")
             return
         }
-        if adress.isEmpty {
+        if address.isEmpty {
             SVProgressHUD.showError(withStatus: "全ての項目を入力してください。")
             return
         }
@@ -161,7 +161,7 @@ class ProfileViewController: UIViewController {
         dateFormatter.dateFormat = "yyyy年MM月dd日"
         // 性別セグメントから性別の取得
         let sex = self.sexSegment.titleForSegment(at: self.sexSegment.selectedSegmentIndex)!
-        let message = "お名前：\(name)\n〒：\(postNo1)-\(postNo2)\n住所：\(adress)\n電話番号：\(tel)\n誕生日：\(dateFormatter.string(from: dateBirthday!))\n性別：\(sex)"
+        let message = "お名前：\(name)\n〒：\(postNo1)-\(postNo2)\n住所：\(address)\n電話番号：\(tel)\n誕生日：\(dateFormatter.string(from: dateBirthday!))\n性別：\(sex)"
         
         let alert: UIAlertController = UIAlertController(title: "下記の内容で登録します。", message: message, preferredStyle:  UIAlertController.Style.alert)
         
@@ -173,7 +173,7 @@ class ProfileViewController: UIViewController {
             let userDic = [
                 "name" : name ,
                 "postNo" : postNo1 + "-" + postNo2 ,
-                "adress" : adress ,
+                "address" : address ,
                 "tel" : tel ,
                 "sex" : sex ,
                 "birthday" : dateBirthday!
@@ -222,7 +222,7 @@ extension ProfileViewController: UITextFieldDelegate {
         self.nameTextField.delegate = self
         self.postNo1TextField.delegate = self
         self.postNo2TextField.delegate = self
-        self.adressTextField.delegate = self
+        self.addressTextField.delegate = self
         self.telTextField.delegate = self
         self.birthdayTextField.delegate = self
         // キーボードイベント監視

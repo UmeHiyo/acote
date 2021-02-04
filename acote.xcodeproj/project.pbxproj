@@ -27,11 +27,12 @@
 		8568A63A257F31D60042E4FB /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568A639257F31D60042E4FB /* CustomTextField.swift */; };
 		858FF398251C45B400E0D0B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858FF397251C45B400E0D0B6 /* AppDelegate.swift */; };
 		858FF39A251C45B400E0D0B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858FF399251C45B400E0D0B6 /* SceneDelegate.swift */; };
-		858FF39C251C45B400E0D0B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858FF39B251C45B400E0D0B6 /* ViewController.swift */; };
+		858FF39C251C45B400E0D0B6 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858FF39B251C45B400E0D0B6 /* TopViewController.swift */; };
 		858FF39F251C45B400E0D0B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858FF39D251C45B400E0D0B6 /* Main.storyboard */; };
 		858FF3A2251C45B400E0D0B6 /* acote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 858FF3A0251C45B400E0D0B6 /* acote.xcdatamodeld */; };
 		858FF3A4251C45BC00E0D0B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858FF3A3251C45BC00E0D0B6 /* Assets.xcassets */; };
 		858FF3A7251C45BC00E0D0B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858FF3A5251C45BC00E0D0B6 /* LaunchScreen.storyboard */; };
+		859C64D925C94FF20022A2FD /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859C64D825C94FF20022A2FD /* ImageViewController.swift */; };
 		85B1CE5A2579E3BD00B6F947 /* AnswerMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85B1CE592579E3BD00B6F947 /* AnswerMessageCell.xib */; };
 		85B1CE5E2579EB1E00B6F947 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1CE5D2579EB1E00B6F947 /* LoginViewController.swift */; };
 		85B1CE612579F4D900B6F947 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B1CE602579F4D900B6F947 /* AccountViewController.swift */; };
@@ -62,12 +63,13 @@
 		858FF394251C45B400E0D0B6 /* acote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = acote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		858FF397251C45B400E0D0B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		858FF399251C45B400E0D0B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		858FF39B251C45B400E0D0B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		858FF39B251C45B400E0D0B6 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		858FF39E251C45B400E0D0B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		858FF3A1251C45B400E0D0B6 /* acote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = acote.xcdatamodel; sourceTree = "<group>"; };
 		858FF3A3251C45BC00E0D0B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		858FF3A6251C45BC00E0D0B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		858FF3A8251C45BC00E0D0B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		859C64D825C94FF20022A2FD /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		85B1CE592579E3BD00B6F947 /* AnswerMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerMessageCell.xib; sourceTree = "<group>"; };
 		85B1CE5D2579EB1E00B6F947 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		85B1CE602579F4D900B6F947 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +93,7 @@
 		851EA89D257F672200B2E993 /* Top */ = {
 			isa = PBXGroup;
 			children = (
-				858FF39B251C45B400E0D0B6 /* ViewController.swift */,
+				858FF39B251C45B400E0D0B6 /* TopViewController.swift */,
 				85297EBD257754520041C413 /* ChatViewController.swift */,
 			);
 			path = Top;
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				8543AA37255A59C2007803AE /* MenuViewController.swift */,
+				859C64D825C94FF20022A2FD /* ImageViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -333,8 +336,9 @@
 				85B1CE5E2579EB1E00B6F947 /* LoginViewController.swift in Sources */,
 				85297ED7257890B20041C413 /* AnswerMessageCell.swift in Sources */,
 				85B1CE612579F4D900B6F947 /* AccountViewController.swift in Sources */,
+				859C64D925C94FF20022A2FD /* ImageViewController.swift in Sources */,
 				855CD04825AD7158002C19D7 /* KiyakuViewController.swift in Sources */,
-				858FF39C251C45B400E0D0B6 /* ViewController.swift in Sources */,
+				858FF39C251C45B400E0D0B6 /* TopViewController.swift in Sources */,
 				8543AA38255A59C2007803AE /* MenuViewController.swift in Sources */,
 				858FF398251C45B400E0D0B6 /* AppDelegate.swift in Sources */,
 				85C1822125826461002F17C1 /* Message.swift in Sources */,
@@ -424,7 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -478,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -496,7 +500,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TMT9VHMH55;
 				INFOPLIST_FILE = acote/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -516,7 +520,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TMT9VHMH55;
 				INFOPLIST_FILE = acote/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -115,7 +115,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             let nextViewController = self.storyboard!.instantiateViewController(identifier: "password")
             self.present(nextViewController, animated: true, completion: nil)
         case 3:
-            let nextViewController = self.storyboard!.instantiateViewController(identifier: "password")
+            let nextViewController = self.storyboard!.instantiateViewController(identifier: "image")
             self.present(nextViewController, animated: true, completion: nil)
         default:
             let alert: UIAlertController = UIAlertController(title: "注意", message: "ログアウトしてもよろしいですか？", preferredStyle:  UIAlertController.Style.alert)
